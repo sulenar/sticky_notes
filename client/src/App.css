@@ -1,0 +1,114 @@
+.AppBoard {
+  border: 3px solid rgb(111, 41, 97);
+  border-radius: 0.5em;
+  padding: 2px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 160px));
+  grid-gap: 8px;
+}
+
+.AppEdit {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  grid-area: ed;
+}
+
+.AppRemove {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  grid-area: rm;
+}
+
+.text {
+  min-width: 130px;
+  border: 1px solid rgb(76, 78, 75);
+  border-radius: 4px;
+  word-wrap: break-word;
+}
+
+.AppHeader {
+  min-height: 20px;
+  grid-area: hd;
+}
+
+.AppDescription {
+  min-height: 105px;
+  grid-area: ds;
+}
+
+.AppNote {
+  display: grid;
+  background-color: #ded8639c;
+  border-radius: 3px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 2px;
+  grid-template-areas:
+    ". . . . ed rm"
+    "hd hd hd hd hd hd"
+    "ds ds ds ds ds ds";
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.field {
+  clear: both;
+  text-align: right;
+}
+
+.FormChangeDataHidden {
+  visibility: none;
+}
+
+.newName {
+  visibility: none;
+}
+
+.form-popup {
+  display: none;
+  position: fixed;
+
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+.form-container input[type="text"],
+.form-container input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+.form-container input[type="text"]:focus,
+.form-container input[type="password"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.form-container .btn {
+  background-color: #4caf50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+.form-container .cancel {
+  background-color: red;
+}
+
+.form-container .btn:hover,
+.open-button:hover {
+  opacity: 1;
+}
